@@ -1,36 +1,36 @@
-JQuery Collision
+=JQuery Collision=
 
-INSTALLATION
+==INSTALLATION==
 
-- Copy jquery-collision.js or any specific or minified version of jquery-collision(-x.x.x)(.min).js into your javascript directory
-- Make sure that jquery 1.5.1 or later is somewhere accessible
-- To use, make sure that jquery 1.5.1 or later is loaded in a <script> tag
-- After that, load jquery-collision:
+* Copy jquery-collision.js or any specific or minified version of jquery-collision(-x.x.x)(.min).js into your javascript directory
+* Make sure that jquery 1.5.1 or later is somewhere accessible
+* To use, make sure that jquery 1.5.1 or later is loaded in a <script> tag
+* After that, load jquery-collision:
   <script src="jquery-1.5.1.js"></script>
   <script src="jquery-collision.js"></script>
-- From then on, $(...).collision(...) will be available in your javascript code
+* From then on, $(...).collision(...) will be available in your javascript code
 
-USAGE
+==USAGE==
 
-- Basic usage returns the obstacles that are hit by the colliders:
+* Basic usage returns the obstacles that are hit by the colliders:
   var colliders_selector = ".collider";
   var obstacles_selector = ".obstacle";
   var hits = $(colliders_selector).collision(obstacles_selector)
 
-- There are a number of options available, passed in as a second argument:
+* There are a number of options available, passed in as a second argument:
   var hits = $(colliders_selector).collision(obstacles_selector, { mode: "collision" /*etc*/ } )
 
-OPTIONS
+==OPTIONS==
 
-- as: "<div />" or any selector to morph
+* as: "<div />" or any selector to morph
   
   This changes the nature of what is returned. Rather than returning the obstacles that were hit, it returns the overlapping
   areas themselves. The "as" refers to the kind of HTML DOM object it creates. If there is one collision, and the overlap
   is 50x50 starting at [100,100] from the edge of the window, and "as" is "<div />", it essentially returns:
 
-  $('<div style="left:100px; top:100px; width:50px; height:50px;></div>')
+  <nowiki>$('<div style="left:100px; top:100px; width:50px; height:50px;"></div>')</nowiki>
 
-- relative: "body", "collider", "obstacle", or any selector
+* relative: "body", "collider", "obstacle", or any selector
 
   If we are returning an "as" object, the default coordinates are relative to "body". If "collider" is given, then the
   coordinates are relative to that collision's collider. If "obstacle" is given, then the coordinates are relative to the
@@ -38,17 +38,17 @@ OPTIONS
   "#gameboard" as a relative setting, get all the collisions, and then append them to "#gameboard", and they will overlap
   properly.
 
-- colliderData: "some_string"
+* colliderData: "some_string"
 
   If set, all returned "as" objects have a .data("some_string") value available, containing the $(collider) object for that
   particular collision.
 
-- obstacleData: "some_string"
+* obstacleData: "some_string"
 
   If set, all returned "as" objects have a .data("some_string") value available, containing the $(obstacle) object for that
   particular collision.
 
-- directionData: "some_string"
+* directionData: "some_string"
 
   If set, all returned "as" objects have a .data("some_string") value available, containing a string describing what part of
   the collider was hit. Possibilities include the 8 compass directions in caps, plus "Inside" and "Outside". For example,
@@ -59,7 +59,7 @@ OPTIONS
 
   The association to the collider is reversed for protrusions, see below.
 
-- mode: "collision" (default), or "protrusion"
+* mode: "collision" (default), or "protrusion"
 
   If set to collision or not set at all, all of the above is what happens. If set to "protrusion", the collision detection
   goes in reverse. So rather than returning what obstacles the colliders hit, it returns what ones they are escaping from.
@@ -87,13 +87,9 @@ OPTIONS
   if it's escaping out the top, bottom, and side simultaneously, for example: one each for top, bottom, and side, plus the
   two corner chunks. And EIGHT if the collider totally engulfs (is escaping in every direction from) the restraint.
 
-EXAMPLES
+==EXAMPLES==
 
-- In addition to the above installation requirements, also make sure that jquery ui 1.8.12 or later is available
-- Make sure that jquery-collision.js, jquery-1.5.1.js and ui/jquery.ui.*.js are in the same directory as the examples
-- Load the examples up in a browser
-
-DOCUMENTATION
-
-- For more details, see https://sourceforge.net/apps/mediawiki/jquerycollision/
+* In addition to the above installation requirements, also make sure that jquery ui 1.8.12 or later is available
+* Make sure that jquery-collision.js, jquery-1.5.1.js and ui/jquery.ui.*.js are in the same directory as the examples
+* Load the examples up in a browser
 
