@@ -365,8 +365,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		var array;
 		// if no "as", then just the jquery object that we collided with
 		// but if there's as="<div/>", then make div's out of the overlaps
-		if( ! as ) array = ov.map( function(e,i,a){ return e.obstacle.proto; } );
-		else       array = ov.map( function(e,i,a){ var xoff = e.overlap.x1;
+		if( ! as ) array = $.map( ov, function(e,i,a){ return e.obstacle.proto; } );
+		else       array = $.map( ov, function(e,i,a){ var xoff = e.overlap.x1;
 																								var yoff = e.overlap.y1;
 																								if( rel && rel != "body" ) 
 																								{ 
