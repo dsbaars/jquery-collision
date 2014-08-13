@@ -1,0 +1,25 @@
+{
+  "name": "jquery-collision",
+  "version": "1.0.0",
+  "authors": [
+    "Sean Cusack",
+    "Djuri Baars <dsbaars@gmail.com>"
+  ],
+  "description": "JQuery extension to return the collisions between two selectors.",
+  "main": "js/jquery.collision.js",
+  "keywords": [
+    "jquery",
+    "collision"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=1.5.1"
+  }
+}
