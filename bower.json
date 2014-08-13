@@ -6,7 +6,7 @@
     "Djuri Baars <dsbaars@gmail.com>"
   ],
   "description": "JQuery extension to return the collisions between two selectors.",
-  "main": "js/jquery.collision.js",
+  "main": "js/jquery-collision.js",
   "keywords": [
     "jquery",
     "collision"
